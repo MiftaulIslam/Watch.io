@@ -1,0 +1,160 @@
+@import "../../mixin.scss";
+.logo {
+  cursor: pointer;
+}
+.header {
+  @include sm {
+    padding: 0.5rem 0;
+  }
+  padding: 1rem;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  transition: all 0.4s ease;
+  &.top {
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 99;
+  }
+  &.show {
+    background: var(--black3);
+    z-index: 99;
+  }
+  &.hide {
+    display: none;
+  }
+  &.mobile {
+    background: var(--black3);
+    transform: translateX(5px);
+    -webkit-transform: translateX(5px);
+    -moz-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    -o-transform: translateX(5px);
+    z-index: 100;
+    .mobile_view {
+      padding: 0 1rem;
+      .menu_items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        .menu_item {
+          margin-bottom: 1rem;
+          color: white;
+          font-size: 1rem;
+          font-weight: 600;
+          cursor: pointer;
+        }
+        .search_input {
+          margin-bottom: 1rem;
+          width: 100%;
+          input {
+            width: calc(100%);
+            height: 2.5rem;
+            border-radius: 20px 20px 20px 20px;
+            -webkit-border-radius: 20px 20px 20px 20px;
+            -moz-border-radius: 20px 20px 20px 20px;
+            -ms-border-radius: 20px 20px 20px 20px;
+            -o-border-radius: 20px 20px 20px 20px;
+            padding: 0 1rem;
+            border: none;
+            outline: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: gray;
+          }
+        }
+        .search_input_button {
+          button {
+            border: none;
+            outline: none;
+            background: rgb(26, 117, 217);
+            background: var(--gradient);
+            height: 2.5rem;
+            padding: 0 3rem;
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: white;
+            border-radius: 30px 30px 30px 30px;
+            -webkit-border-radius: 30px 30px 30px 30px;
+            -moz-border-radius: 30px 30px 30px 30px;
+            -ms-border-radius: 30px 30px 30px 30px;
+            -o-border-radius: 30px 30px 30px 30px;
+            cursor: pointer;
+            transition: 0.4s;
+            -webkit-transition: 0.4s;
+            -moz-transition: 0.4s;
+            -ms-transition: 0.4s;
+            -o-transition: 0.4s;
+          }
+        }
+      }
+    }
+  }
+  .contentWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .menu_items {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .menu_search {
+        display: flex;
+      justify-content: center;
+      align-items: center;
+        input{
+        height: 1.8rem;
+        border-radius: 20px 0 0 20px;
+        -webkit-border-radius: 10px 0 0 10px;
+        -moz-border-radius: 10px 0 0 10px;
+        -ms-border-radius: 10px 0 0 10px;
+        -o-border-radius: 10px 0 0 10px;
+        padding: 0 1rem;
+        border: none;
+        outline: none;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: gray;}
+        button{
+            outline: none;
+    border: none;
+    background: transparent;
+    color: #ddd;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-left: 0.5rem;
+        }
+      }
+      .menu_item {
+        margin-right: 1rem;
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+
+        &:hover {
+          color: var(--orange);
+        }
+      }
+      @include sm {
+        display: none;
+      }
+    }
+    .mobile_responsive {
+      display: none;
+      @include sm {
+        display: block;
+      }
+      .mobile_icon {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 600;
+        cursor: pointer;
+        &:hover {
+          color: var(--orange);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,303 @@
+@import "../../mixin.scss";
+
+.get_details {
+  position: relative;
+  top: 4.8rem;
+  height: 100vh;
+  z-index: 0;
+  .backdrop_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0.5;
+    .lazy-load-image-background {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+      }
+    }
+  }
+  .contentWrapper {
+    z-index: 99;
+    position: relative;
+
+    height: 100vh;
+// Main content section
+    .get_details_content {
+      width: 100%;
+      // Sub content section
+      .all_contents {
+        width: 100%;
+        // Movie Details section
+        .movie_details {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          justify-content: center;
+          .movie_poster {
+            min-width: 5rem;
+            max-width: 12rem;
+            box-shadow: 9px 10px 29px 0px rgba(0, 0, 0, 0.2);
+            -webkit-box-shadow: 9px 10px 29px 0px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 9px 10px 29px 0px rgba(0, 0, 0, 0.2);
+            img {
+              width: 100%;
+            }
+          }
+          .movie_contents {
+            min-width: 18rem;
+            max-width: 39rem;
+            color: #ddd;
+            padding: 0rem 1rem;
+            font-size: 14px !important;
+            .tiny_info {
+              button {
+                color: #ddd;
+                border: 0;
+                outline: 0;
+                cursor: context-menu;
+                background: none;
+                font-weight: 600;
+                padding: 0rem 1rem 0 0;
+              }
+            }
+
+            .details_of_movie {
+              p {
+                padding: 0;
+                margin: 0;
+              }
+            }
+          }
+        }
+        // Cast Section
+        .top_casts {
+          padding: 1rem 0 0 0 !important;
+          max-width: 100%;
+@include sm{
+  margin-top: 100px;
+}
+@include md{
+  margin-top: 100px;
+}
+          h4 {
+            color: #ddd;
+          }
+          &::-webkit-scrollbar {
+            display: block;
+            height: 6px;
+          }
+
+          &::-webkit-scrollbar-track {
+            background-color: transparent;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background-color: rgba(226, 223, 223, 0.42);
+            border-radius: 10px;
+          }
+
+          white-space: nowrap;
+          overflow-x: auto;
+          .cast_details {
+            cursor: pointer;
+            width: 7rem;
+            display: inline-block;
+            margin-right: 1rem;
+            .cast_contents {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              white-space: break-spaces;
+              p {
+                padding-top: 5px;
+                color: #ddd;
+                font-size: 13px;
+              }
+              .cast_image {
+                min-width: 90px;
+                max-width: 105px;
+                height: 105px;
+                border-radius: 50px;
+                box-shadow: 9px 10px 29px 0px rgba(0, 0, 0, 0.2);
+                -webkit-box-shadow: 9px 10px 29px 0px rgba(0, 0, 0, 0.2);
+                -moz-box-shadow: 9px 10px 29px 0px rgba(0, 0, 0, 0.2);
+                img {
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 50%;
+                  -webkit-border-radius: 50%;
+                  -moz-border-radius: 50%;
+                  -ms-border-radius: 50%;
+                  -o-border-radius: 50%;
+                }
+              }
+            }
+          }
+        }
+      }
+      // video Section
+      .movie_video_section {
+        h4 {
+          color: #ddd;
+        }
+        margin-top: 1rem;
+        padding-bottom: 0.5rem;
+        width: 100%;
+        white-space: nowrap;
+        overflow-y: hidden;
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+          display: block;
+          height: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: rgba(226, 223, 223, 0.42);
+          border-radius: 10px;
+        }
+        .movie_videos {
+          display: inline-block;
+          margin-right: 1rem;
+          width: 20rem;
+          height: 12rem;
+        }
+      }
+      .recomendation_section{
+        &::-webkit-scrollbar {
+          display: block;
+          height: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: rgba(226, 223, 223, 0.42);
+          border-radius: 10px;
+        }
+        margin-top: 2rem;
+        padding: 1rem 0;
+        width: 100%;
+        white-space: nowrap;
+        overflow-y: hidden;
+        overflow-x: auto;
+        color: #ddd;
+        .reconmendation_item{
+          display: inline-block;
+          width: 11rem;
+          margin: 0.2rem;
+          box-shadow: 9px 10px 29px 0px rgba(0, 0, 0, 0.2);
+          -webkit-box-shadow: 9px 10px 29px 0px rgba(0, 0, 0, 0.2);
+          -moz-box-shadow: 9px 10px 29px 0px rgba(0, 0, 0, 0.2);
+          background: rgba(28, 47, 74, 0.5215686275);
+          border-radius: 0.5rem;
+          cursor: pointer;
+          color: #ddd;
+          .recomendation_item_image{
+            width: 100%;
+            aspect-ratio: 1/1.5;
+            cursor: pointer;
+            position: relative;
+            .lazy-load-image-background{
+              width: 100%;
+              height: 100%;
+              border-radius: 12px;
+              overflow: hidden;
+              img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+              }
+            }
+            .genres{
+              position: absolute;
+      bottom: 10px;
+      left: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      p{
+        background: rgba(28, 47, 74, 0.5215686275);
+        padding: 0.2rem 0.5rem;
+        font-size: 13px;
+        color: white;
+        margin: 0.2rem 0.2rem;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+      }
+            }
+          }
+         
+          .recomendation_item_content{
+            margin: 0.5rem 0 0 0;
+            height: 10rem;
+            padding: 0 0.5rem;
+            color: #ddd;
+            .recomendation_movie_name{
+              padding: 0.6rem 0;
+              font-weight: 500;
+              color: #ddd;
+              height: 60px;
+              white-space: break-spaces;
+            }
+            .date{
+              font-size: 15px;
+              color: #ddd;
+              font-weight: 600;
+              margin: 0 0 1rem 0;
+            }
+          }
+          .view_button{
+            display: flex;
+            justify-content: center;
+            margin-top: -2rem;
+            padding-bottom: 1rem;
+            button{
+              width: 10rem;
+              height: 2.3rem;
+              background: rgba(41, 55, 75, 0.7215686275);
+              border: none;
+              outline: none;
+              color: white;
+              border-radius: 6px;
+              display: inline-block;
+              font-weight: 700;
+              box-shadow: 9px 10px 29px 0px rgba(0, 0, 0, 0.2);
+              -webkit-box-shadow: 9px 10px 29px 0px rgba(0, 0, 0, 0.2);
+              -moz-box-shadow: 9px 10px 29px 0px rgba(0, 0, 0, 0.2);
+              cursor: pointer;
+              transition: 0.2s;
+              -webkit-transition: 0.2s;
+              -moz-transition: 0.2s;
+              -ms-transition: 0.2s;
+              -o-transition: 0.2s;
+              &:hover{
+                background: transparent;
+                border: 2px solid var(--black-lighter);
+                color: #4b93ff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
