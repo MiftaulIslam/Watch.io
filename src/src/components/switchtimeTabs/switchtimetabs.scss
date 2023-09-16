@@ -1,0 +1,41 @@
+.time_tabs {
+    height: 34px;
+    // background-color: white;
+    width: 18rem;
+    padding: 2px;
+    .tab_items {
+        display: flex;
+        align-items: center;
+        height: 30px;
+        position: relative;
+        .tab_item {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            color: var(--black);
+            font-size: 14px;
+            position: relative;
+            z-index: 1;
+            background: transparent;
+
+            cursor: pointer;
+            transition: color ease 0.3s;
+            color: white;
+            border: none;
+            outline: none;
+            &.active {
+                color: red;
+            }
+    }
+    .movingbg{
+        height: 100%;
+        width: 100px;
+        border-bottom: 1px solid red;
+        position: absolute;
+        top: 0;
+        left: 100px;
+    }
+}
+}

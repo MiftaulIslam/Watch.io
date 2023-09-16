@@ -1,0 +1,30 @@
+@import '../../mixin.scss';
+.page{
+
+.pagination{
+    --bs-pagination-bg: transparent;
+    --bs-pagination-color: #ddd;
+    --bs-pagination-border-radius: 50%;
+    --bs-pagination-hover-color: black;
+    --bs-pagination-hover-bg: #ddd;
+    --bs-pagination-active-bg: royalblue;
+    --bs-pagination-active-border-color: transparent;
+    --bs-pagination-disabled-color: #ddd;
+    --bs-pagination-disabled-bg: transparent;
+    --bs-pagination-border-color: transparent;
+    --bs-pagination-disabled-border-color: transparent;
+    .page-item{
+        margin-right: 5px;
+    width: 41px;
+    height: 41px;
+    text-align: center;
+    .page-link{
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+
+    }
+    }
+}
+
+}

@@ -1,0 +1,101 @@
+@import "../../../mixin.scss";
+.herobanner {
+  position: relative;
+  top: 4.6rem;
+  display: flex;
+  align-items: center;
+  background: var(--black);
+  width: 100%;
+  height: 42rem;
+  margin-bottom: 3rem;
+  @include sm {
+    height: 400px;
+  }
+  .backdrop_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0.5;
+    .lazy-load-image-background {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .opacity_layer {
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(4, 21, 45, 0) 0%, #04152d 79.17%);
+  }
+  .contentWrapper {
+    z-index: 99;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 600px;
+    .herobanner_title,
+    .herobanner_sub_title {
+      color: white;
+      margin-bottom: 1rem;
+    }
+    .herobanner_search_input {
+      width: 100%;
+      input {
+        width: calc(100% - 150px);
+        height: 2.5rem;
+        border-radius: 20px 0 0 20px;
+        -webkit-border-radius: 10px 0 0 10px;
+        -moz-border-radius: 10px 0 0 10px;
+        -ms-border-radius: 10px 0 0 10px;
+        -o-border-radius: 10px 0 0 10px;
+        padding: 0 1rem;
+        border: none;
+        outline: none;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: gray;
+      }
+      button {
+        border: none;
+        outline: none;
+        background: rgb(26,117,217);
+background: var(--gradient);
+        height: 2.5rem;
+        padding: 0 3rem;
+        display: inline-block;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: white;
+        border-radius: 0px 30px 30px 0px;
+        -webkit-border-radius: 0px 10px 10px 0px;
+        -moz-border-radius: 0px 10px 10px 0px;
+        -ms-border-radius: 0px 10px 10px 0px;
+        -o-border-radius: 0px 10px 10px 0px;
+        cursor: pointer;
+        transition: 0.4s;
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -ms-transition: 0.4s;
+        -o-transition: 0.4s;
+
+        &:hover {
+          transform: scale(1.04);
+          -webkit-transform: scale(1.04);
+          -moz-transform: scale(1.04);
+          -ms-transform: scale(1.04);
+          -o-transform: scale(1.04);
+        }
+      }
+    }
+  }
+}
