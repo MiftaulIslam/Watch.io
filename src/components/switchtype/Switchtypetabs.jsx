@@ -1,16 +1,15 @@
 
 import PropTypes from 'prop-types'; // Import PropTypes
 
-import './switchtimetabs.scss';
+import './switchtypetabs.scss';
 import { useState } from 'react';
 
-const Switchtimetabs = ({ data, ontimeChange }) => {
-  // eslint-disable-next-line no-unused-vars
-  const [selectTab, setselectTab] = useState(0);
+const Switchtypetabs = ({ data, ontypeChange }) => {
+
   const [left, setleft] = useState(0);
   const activeTab = (tab, index)=>{
 setleft(index * 100)
-ontimeChange(tab, index)
+ontypeChange(tab, index)
   }
   return (
     <>
@@ -29,9 +28,9 @@ ontimeChange(tab, index)
 };
 
 // Add PropTypes validation for data and onstateChange
-Switchtimetabs.propTypes = {
+Switchtypetabs.propTypes = {
   data: PropTypes.arrayOf(PropTypes.string).isRequired, // Assuming data is an array of strings
-  ontimeChange: PropTypes.func, // You can specify this if it's required
+  ontypeChange: PropTypes.func, // You can specify this if it's required
 };
 
-export default Switchtimetabs;
+export default Switchtypetabs;
